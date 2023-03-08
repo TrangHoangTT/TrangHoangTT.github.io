@@ -1,0 +1,186 @@
+body {
+  margin: 0px;
+}
+
+.cv-document {
+  box-sizing: border-box;
+  border: none;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: arial, sans-serif, tahoma;
+  font-size: 10pt;
+}
+
+.cv-page {
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  text-decoration: none;
+  width: 900px;
+  min-height: 900px;
+  margin: 0 auto;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+  position: relative;
+
+  padding: 40px;
+}
+.cv-header {
+  margin: 40px;
+  position: relative;
+}
+h1.name {
+  font-size: 40px;
+  font-weight: bold;
+  color: #0e2452;
+  margin-bottom: 0;
+}
+.default-avatar {
+  position: absolute; /*thiết lập vị trí tuyệt đối lấy thẻ cha làm gốc*/
+  top: 0;
+  right: 0;
+}
+.default-info,
+.detail-info {
+  list-style: none; /*Xoá dấu chấm tròn mặc định của kiểu list*/
+  line-height: 2;
+  display: inline-block;
+  margin-top: 0;
+}
+.default-info {
+  font-weight: bold;
+  padding: 0;
+}
+div.section {
+  margin: 40px;
+}
+
+h2.section-title {
+  text-transform: uppercase;
+  border-bottom: solid #000;
+  padding-bottom: 5px;
+}
+div.detail {
+  margin: 10px 0;
+  border-bottom: solid #d7d7d7;
+  display: flex;
+  align-items: baseline;
+  /* Thuộc tính align-items sử dụng để điều chỉnh vị trí bắt đầu và căn chỉnh các item bên trong container */
+  /*tham số baseline để căn chỉnh item theo đường cơ sở của chúng(đường các chữ cái ngồi lên)*/
+  /* justify-content: flex-start; */
+}
+div.detail-exp {
+  /* display: flex;
+  flex-wrap: nowrap;*/
+}
+/* div.time-exp {
+  flex-basis: 108.22px;
+} */
+/* div.content-exp {
+  flex-grow: 9;
+} */
+
+div.time {
+  display: inline-block;
+  position: relative;
+}
+/* div.time-edu {
+  bottom: 40px;
+} */
+
+/* div.time-act {
+  bottom: 40px;
+} */
+div.content {
+  display: inline-block;
+  padding-left: 100px;
+}
+div.content-edu {
+}
+
+div.content p {
+  margin: 5px;
+}
+div.content-exp ul {
+  list-style: none;
+  padding: 0;
+  margin: 5px;
+  line-height: 1.5;
+}
+/* in đậm phần tử p đầu tiên là con của div  */
+div.content-edu p:first-child,
+div.content-exp p:first-child,
+div.content-act p:first-child,
+div.name-skill {
+  font-weight: bold;
+}
+
+/*xác định độ dài ban đầu của item.*/
+div.name-skill,
+div.time-cert {
+  flex-basis: 108.22px;
+}
+div.content-cert p {
+  text-transform: uppercase;
+}
+ul.hobby {
+  padding: 10px;
+}
+h3.project-title {
+  text-transform: uppercase;
+  font-size: 16.6px;
+  margin-bottom: 5px;
+}
+ul.detail-prj,
+ol.detail-contact {
+  padding-left: 15px;
+}
+.time-prj {
+  margin: 5px 0;
+}
+ol.detail-contact {
+  border-bottom: solid #d7d7d7;
+  padding-bottom: 5px;
+}
+ol.detail-contact a {
+  text-decoration: none;
+  line-height: 1.5;
+}
+/* Tạo time line */
+.timeline {
+  position: relative;
+  margin: 0 auto;
+}
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  background-color: #d7d7d7;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin-left: -10px;
+}
+div.time-edu::before,
+div.time-exp::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  left: -13px;
+  border: 4px solid #000;
+  top: 4px;
+  border-radius: 50%;
+  z-index: 1;
+}
+div.section-content {
+  margin-left: 10px;
+}
